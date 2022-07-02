@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Photo from '../img/photo_profile.JPG';
 
-const Bio = props => (
+const Bio = () => (
   <div className={styles.container}>
     <section>
       <h2 className={styles.subtitle}>About me</h2>

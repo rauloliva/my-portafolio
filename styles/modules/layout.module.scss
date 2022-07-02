@@ -1,16 +1,33 @@
 @import "variables.scss";
 
 .layout {
-    background-color: $color-quaternary;
     width: 100%;
     height: auto;
     min-height: 100%;
+
+    &_light {
+        background-color: $color-quaternary;
+        color: $color-primary;
+        transition: all .5s;
+    }
+
+    &_dark {
+        background-color: $color-primary;
+        transition: all .6s;
+
+        & h2, p, ul {
+            color: $color-quaternary;
+        }   
+    }
 
     &__nav {
         background-color: $color-tertiary-light;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 900;
 
         &_author {
             font-family: lobster, serif;
@@ -27,8 +44,13 @@
             }
         }
 
-        &_moon {
-            font-size: .50em;
+        &_change_contrast {
+            cursor: pointer;
+
+            &:hover {
+                transition: all .7s;
+                transform: rotate(360deg);
+            }
         }
     }
 }
