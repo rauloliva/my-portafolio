@@ -1,67 +1,69 @@
-@import "variables.scss";
+@import 'variables.scss';
 
 .layout {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
 
-    &_light {
-        background-color: $color-quaternary;
-        color: $color-primary;
-        transition: all .5s;
+  &_light {
+    background-color: $color-quaternary;
+    color: $color-primary;
+    transition: all 0.5s;
+  }
+
+  &_dark {
+    background-color: $color-primary;
+    transition: all 0.6s;
+
+    & h2,
+    p,
+    ul {
+      color: $color-quaternary;
+    }
+  }
+
+  &__nav {
+    background-color: $color-tertiary-light;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+
+    &_author {
+      font-family: lobster, serif;
+      font-size: 2.25em;
+      transition: all 0.6s;
+
+      &:hover {
+        letter-spacing: 1.5px;
+        transition: all 0.5s;
+      }
     }
 
-    &_dark {
-        background-color: $color-primary;
-        transition: all .6s;
+    &_link {
+      font-size: 1.5em;
 
-        & h2, p, ul {
-            color: $color-quaternary;
-        }   
+      &:hover {
+        border-bottom: 2px solid $color-primary;
+      }
     }
 
-    &__nav {
-        background-color: $color-tertiary-light;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 900;
+    &_change_contrast {
+      cursor: pointer;
 
-        &_author {
-            font-family: lobster, serif;
-            font-size: 2.25em;
-            transition: all .6s;
-
-            &:hover {
-                letter-spacing: 1.5px;
-                transition: all .5s;
-            }
-        }
-
-        &_link {
-            font-size: 1.50em;
-
-            &:hover {
-                border-bottom: 2px solid $color-primary;
-            }
-        }
-
-        &_change_contrast {
-            cursor: pointer;
-
-            &:hover {
-                transition: all .7s;
-                transform: rotate(360deg);
-            }
-        }
+      &:hover {
+        transition: all 0.7s;
+        transform: rotate(360deg);
+      }
     }
+  }
 
-    &_footer {
-        background-color: $color-tertiary-light;
-        color: $color-primary;
-        padding: 1rem 0;
-        text-align: center;
-    }
+  &_footer {
+    background-color: $color-tertiary-light;
+    color: $color-primary;
+    padding: 1rem 0;
+    text-align: center;
+  }
 }
