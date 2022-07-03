@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Moon from '../img/moon.svg';
 import Sun from '../img/sun.svg';
+import Arrow_right from '../img/arrow-right.svg';
 
 const Layout = props => {
   const color_layout =
@@ -18,7 +19,12 @@ const Layout = props => {
           </Link>
         </label>
         <Link href="/my-works">
-          <a className={style.layout__nav_link}>Portafolio</a>
+          <a className={style.layout__nav_link}>
+            <span>Portafolio</span>
+            <span className={style.layout__nav_arrow}>
+              <Image src={Arrow_right} alt="Arrow right" />
+            </span>
+          </a>
         </Link>
         <Image
           src={change_contrast_img}

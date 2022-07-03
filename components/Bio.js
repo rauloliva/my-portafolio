@@ -4,6 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import photo from '../img/photo_profile.JPG';
 
+const getAge = dateString => {
+  var today = new Date();
+  var birthDate = new Date(dateString);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+};
+
 const Bio = () => (
   <div className={styles.container}>
     <section>
@@ -11,9 +22,11 @@ const Bio = () => (
       <div className={styles.section}>
         <div className={styles.section_text}>
           <p>
-            I&apos;m a Software Engineer based in Guadalajara, Mexico, I&apos;m
-            24 years old and I started working in the industry since 2019,
-            currently I’m working as a Web Publisher for NXP Semiconductors.
+            I&apos;m a Software Engineer based in Guadalajara, Mexico,
+            I&apos;m&nbsp;
+            {getAge('1997-09-28')} years old and I started working in the
+            industry since 2019, currently I’m working as a Web Publisher for
+            NXP Semiconductors.
           </p>
           <p>My hobbies include: programming and learning, sports and music.</p>
           <p>I consider myself a full-stack developer.</p>
@@ -43,15 +56,15 @@ const Bio = () => (
           </li>
           <li>
             <span className={globalStyles.bottom_line}>2019</span> Graduated
-            from University
+            from College
           </li>
           <li>
             <span className={globalStyles.bottom_line}>2019</span> Started
-            Working at Tata Consultancy Services
+            working at Tata Consultancy Services
           </li>
           <li>
-            <span className={globalStyles.bottom_line}>2020</span> Started new
-            job at NXP Semiconductors
+            <span className={globalStyles.bottom_line}>2020</span> Started
+            working at NXP Semiconductors
           </li>
         </ul>
       </div>
