@@ -7,8 +7,19 @@ const Home = props => {
     <>
       <Head>
         <title>Raul Oliva - Home Page</title>
-        <meta name='description' content='Brief biography about the mexican developer Raul Oliva'/>
-        <meta name='keywords' content='Raul Oliva, portafolio, software developer, Github repositories'/>
+        <meta
+          name="description"
+          content="Brief biography about the mexican developer Raul Oliva"
+        />
+        <meta
+          name="keywords"
+          content="Raul Oliva, biography, software developer, raul_oliva_cas, raul-oliva-27208817b, rauloliva"
+        />
+        <link
+          rel="shortcut icon"
+          href="/photo_profile.JPG"
+          type="image/x-icon"
+        />
       </Head>
       <Layout theme={props.theme} changeTheme={props.changeTheme}>
         <Bio />

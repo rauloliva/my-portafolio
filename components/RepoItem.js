@@ -1,10 +1,13 @@
 import styles from '../styles/modules/portafolio.module.scss';
 import Image from 'next/image';
+
+// programming langs logos
 import html_logo from '../img/html.png';
 import java_logo from '../img/java.png';
 import php_logo from '../img/php.png';
 import javascript_logo from '../img/javascript.png';
 import python_logo from '../img/python.png';
+import undefined_image from '../img/undefined.png';
 
 const RepoItem = props => {
   const repo = props.repo;
@@ -47,6 +50,9 @@ const get_language_logo = language => {
 
     case 'Python':
       return python_logo;
+
+    default:
+      return undefined_image;
   }
 };
 
