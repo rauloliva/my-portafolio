@@ -4,11 +4,23 @@
   width: 40%;
   margin: auto;
   padding: 5px;
+
+  @media screen and (max-width: $bp-tablet )  {
+    width: 80%;
+  }
+
+  @media screen and (max-width: $bp-phone )  {
+    width: 80%;
+  }
 }
 
 .subtitle {
   text-transform: uppercase;
   margin: 1rem 0;
+
+  @media screen and (max-width: $bp-phone) {
+    font-size: 1.2em;
+  }
 }
 
 .repos_container {
@@ -25,6 +37,10 @@
   border-radius: 5px;
   box-shadow: 5px 10px 8px 8px;
   cursor: pointer;
+
+  @media screen and (max-width: $bp-phone) {
+    width: 100%;
+  }
 
   &_light {
     background-color: $color-tertiary;
