@@ -21,6 +21,7 @@ const MyWorks = props => {
           type="image/x-icon"
         />
       </Head>
+
       <Layout theme={props.theme} changeTheme={props.changeTheme}>
         <Portafolio {...props} theme={props.theme} />
       </Layout>
@@ -29,6 +30,7 @@ const MyWorks = props => {
 };
 
 export async function getStaticProps() {
+  // get Github repos
   const res = await fetch('https://api.github.com/users/rauloliva/repos');
   const repositories = await res.json();
 

@@ -2,7 +2,7 @@ import styles from '../styles/modules/bio.module.scss';
 import globalStyles from '../styles/modules/globals.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import Photo from '../img/photo_profile.JPG';
+import photo from '../img/photo_profile.JPG';
 
 const Bio = () => (
   <div className={styles.container}>
@@ -20,7 +20,7 @@ const Bio = () => (
         </div>
         <div className={styles.section_image}>
           <Image
-            src={Photo}
+            src={photo}
             width="600"
             height="600"
             alt="Photo of Raul Oliva"

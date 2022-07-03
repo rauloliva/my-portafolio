@@ -31,7 +31,7 @@ const Layout = props => {
       {props.children}
 
       <footer className={style.layout_footer}>
-        <h3>&copy; Copyright { new Date().getUTCFullYear()} by Raul Oliva</h3>
+        <h3>&copy; Copyright {new Date().getUTCFullYear()} by Raul Oliva</h3>
       </footer>
     </div>
   );

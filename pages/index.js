@@ -21,6 +21,7 @@ const Home = props => {
           type="image/x-icon"
         />
       </Head>
+
       <Layout theme={props.theme} changeTheme={props.changeTheme}>
         <Bio />
       </Layout>
