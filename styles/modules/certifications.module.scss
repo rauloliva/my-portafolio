@@ -40,20 +40,20 @@
 
     @media screen and (max-width: $bp-phone) {
       grid-template-columns: unset;
-      grid-template-rows: 230px 1fr;
+      grid-template-rows: 200px 1fr;
     }
 
     &_reverse {
       grid-template-columns: 1fr 250px;
 
-      @media screen and (max-width: $bp-phone) {
-        grid-template-columns: unset;
-        grid-template-rows: 1fr 230px;
-      }
-
       @media screen and (max-width: $bp-tablet) {
         grid-template-columns: unset;
         grid-template-rows: 150px 1fr;
+      }
+
+      @media screen and (max-width: $bp-phone) {
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 200px;
       }
     }
 
