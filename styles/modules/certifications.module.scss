@@ -9,10 +9,6 @@
     width: 80%;
   }
 
-  @media screen and (max-width: $bp-phone) {
-    width: 80%;
-  }
-
   &_container {
     display: flex;
     flex-direction: column;
@@ -21,7 +17,7 @@
     margin: 1.2rem 20%;
 
     @media screen and (max-width: $bp-phone) {
-      margin: 1.2rem 10%;
+      margin: 1.2rem 5%;
     }
   }
 
@@ -95,7 +91,8 @@
       }
 
       &_due_date {
-        margin: 2.5rem 0;
+        font-size: .95em;
+        font-weight: bold;
       }
     }
 
@@ -113,5 +110,9 @@
   @media screen and (max-width: $bp-phone) {
     font-size: 1.2em;
   }
+}
+
+.h4 {
+  text-align: center;
 }
 

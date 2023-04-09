@@ -7,7 +7,7 @@ import Modal from './Modal';
 const CertificationItem = props => {
   const reverse = props.isReversed ? styles.certifications_box_reverse : '';
 
-  const { title, description, image, isReversed } = props;
+  const { title, description, dueDate, image, isReversed } = props;
 
   const [show, setShow] = useState(false);
 
@@ -29,7 +29,7 @@ const CertificationItem = props => {
     >
       <h3>{title}</h3>
       <p>{description}</p>
-      <p className={styles.certifications_box_info_due_date}>March 2023</p>
+      <p className={styles.certifications_box_info_due_date}>{dueDate}</p>
     </div>
   );
 
