@@ -6,7 +6,7 @@ const Home = props => {
   return (
     <>
       <Head>
-        <title>Raul Oliva - Home Page</title>
+        <title>Home Page</title>
         <meta
           name="description"
           content="Brief biography about the mexican developer Raul Oliva"

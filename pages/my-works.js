@@ -6,7 +6,7 @@ const MyWorks = props => {
   return (
     <>
       <Head>
-        <title>Raul Oliva - Portafolio</title>
+        <title>My Portafolio</title>
         <meta
           name="description"
           content="Portafolio with Github repositories from the mexican developer Raul Oliva"

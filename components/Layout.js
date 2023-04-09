@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Moon from '../img/moon.svg';
 import Sun from '../img/sun.svg';
-import Arrow_right from '../img/arrow-right.svg';
 
 const Layout = props => {
   const color_layout =
@@ -13,19 +12,24 @@ const Layout = props => {
   return (
     <div className={style.layout.concat(' ', color_layout)}>
       <nav className={style.layout__nav}>
-        <label className={style.layout__nav_author}>
+        <label title="Home" className={style.layout__nav_author}>
           <Link href="/">
             <a>Raul Oliva</a>
           </Link>
         </label>
+
         <Link href="/my-works">
-          <a className={style.layout__nav_link}>
-            <span>Portafolio</span>
-            <span className={style.layout__nav_arrow}>
-              <Image src={Arrow_right} alt="Arrow right" />
-            </span>
+          <a title='My Portafolio' className={style.layout__nav_link}>
+            Portafolio
           </a>
         </Link>
+
+        <Link href="/certifications">
+          <a title='My Certifications' className={style.layout__nav_link}>
+            Certifications
+          </a>
+        </Link>
+
         <Image
           src={change_contrast_img}
           onClick={() => props.changeTheme(props.theme)}
