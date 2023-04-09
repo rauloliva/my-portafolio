@@ -20,7 +20,7 @@ const Certifications = props => {
   return (
     <div className={styles.certifications}>
       <h2 className={styles.subtitle}>My Certifications (7)</h2>
-      <h4 className={styles.h4}>Click on an image to expand it and click it again to minimize it</h4>
+      <p className={styles.paragraph}>Click on an image to expand it and click it again to minimize it</p>
       <section className={styles.certifications_container}>
 
         <CertificationItem
@@ -75,6 +75,7 @@ const Certifications = props => {
           description="Master Microsoft Excel from Beginner to Advanced. Harness the full power of Microsoft Excel by automating your day to day tasks through Macros and VBA."
           dueDate="May 2021"
         />
+        
       </section>
     </div>
   );
