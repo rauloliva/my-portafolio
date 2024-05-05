@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import Presentation from '../components/Presentation';
+import AboutView from '../components/AboutView';
 
-const Home = () => {
+const About = () => {
   return (
     <>
       <Head>
-        <title>Raul Oliva | Home</title>
+        <title>Raul Oliva | About</title>
         <meta
           name="description"
           content="Brief biography about the mexican developer Raul Oliva"
@@ -23,10 +23,10 @@ const Home = () => {
       </Head>
 
       <Layout>
-        <Presentation />
+        <AboutView />
       </Layout>
     </>
   );
 };
 
-export default Home;
+export default About;

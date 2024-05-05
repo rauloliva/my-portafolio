@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import Portafolio from '../components/Portafolio';
+import PortafolioView from '../components/PortafolioView';
 
-const MyWorks = props => {
+const Portafolio = props => {
   return (
     <>
       <Head>
-        <title>My Portafolio</title>
+        <title>Raul Oliva | Portafolio</title>
         <meta
           name="description"
           content="Portafolio with Github repositories from the mexican developer Raul Oliva"
@@ -22,24 +22,25 @@ const MyWorks = props => {
         />
       </Head>
 
-      <Layout theme={props.theme} changeTheme={props.changeTheme}>
-        <Portafolio {...props} theme={props.theme} />
+      <Layout>
+        <PortafolioView {...props} />
       </Layout>
     </>
   );
 };
 
 export async function getStaticProps() {
-  // get Github repos
-  const res = await fetch('https://api.github.com/users/rauloliva/repos');
-  const repositories = await res.json();
+    // get my Github repositories
+    const res = await fetch('https://api.github.com/users/rauloliva/repos');
+    const repositories = await res.json();
+  
+    return {
+      props: {
+        repositories,
+      },
+      revalidate: 10
+    };
+  }
+  
 
-  return {
-    props: {
-      repositories,
-    },
-    revalidate: 10
-  };
-}
-
-export default MyWorks;
+export default Portafolio;

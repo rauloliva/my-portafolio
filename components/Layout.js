@@ -1,50 +1,59 @@
-import style from '../styles/modules/layout.module.scss';
+import style from '../styles/modules/Layout.module.scss';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/image';
-import Moon from '../img/moon.svg';
-import Sun from '../img/sun.svg';
 
 const Layout = props => {
-  const color_layout =
-    props.theme == 'dark' ? style.layout_dark : style.layout_light;
-  const change_contrast_img = props.theme == 'dark' ? Sun : Moon;
+  const router = useRouter();
+  const view = router.pathname;
+
+  const { homeStyle, aboutStyle, portafolioStyle, contactStyle } = defineLinkColor(view);
 
   return (
-    <div className={style.layout.concat(' ', color_layout)}>
-      <nav className={style.layout__nav}>
-        <label title="Home" className={style.layout__nav_author}>
-          <Link href="/">
-            <a>Raul Oliva</a>
+    <div className={style.layout}>
+      <div className={style.layout__card}>
+        <title>Portafolio</title>
+        <nav>
+          <Link href="/" passHref prefetch={true}>
+            <a className={homeStyle}>Home</a>
           </Link>
-        </label>
 
-        <Link href="/my-works">
-          <a title='My Portafolio' className={style.layout__nav_link}>
-            Portafolio
-          </a>
-        </Link>
+          <Link href="/about" passHref prefetch={true}>
+            <a className={aboutStyle}>About</a>
+          </Link>
 
-        <Link href="/certifications">
-          <a title='My Certifications' className={style.layout__nav_link}>
-            Certifications
-          </a>
-        </Link>
+          <Link href="/portafolio" passHref >
+            <a className={portafolioStyle}>Portafolio</a>
+          </Link>
 
-        <Image
-          src={change_contrast_img}
-          onClick={() => props.changeTheme(props.theme)}
-          alt="Moon"
-          className={style.layout__nav_change_contrast}
-        />
-      </nav>
+          <Link href="/contact" passHref>
+            <a className={contactStyle}>Contact</a>
+          </Link>
+        </nav>
 
-      {props.children}
-
-      <footer className={style.layout_footer}>
-        <h3>&copy; Copyright {new Date().getUTCFullYear()} by Raul Oliva</h3>
-      </footer>
+        <div className={style.layout__card_content}>{props.children}</div>
+      </div>
     </div>
   );
+};
+
+const defineLinkColor = view => {
+  const homeStyle =
+    view == '/' ? style.layout__link_active : style.layout__link_unactive;
+
+  const aboutStyle =
+    view == '/about' ? style.layout__link_active : style.layout__link_unactive;
+
+  const portafolioStyle =
+    view == '/portafolio'
+      ? style.layout__link_active
+      : style.layout__link_unactive;
+
+  const contactStyle =
+    view == '/contact'
+      ? style.layout__link_active
+      : style.layout__link_unactive;
+
+  return { homeStyle, aboutStyle, portafolioStyle, contactStyle };
 };
 
 export default Layout;

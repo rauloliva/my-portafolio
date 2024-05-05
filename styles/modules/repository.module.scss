@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+.repository {
+    background-color: $third-color;
+    color: $primary-color;
+    border: 5px solid $secondary-color;
+    box-shadow: 5px 5px 8px 8px rgba($third-color, .3);
+    border-radius: 1.2rem;
+    padding: 3px 1rem;
+
+    &__title {
+        column-gap: 1rem;
+        background-color: $primary-color;
+        color: $fourth-color;
+        font-weight: 600;
+        padding: 3px;
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    &__link {
+        display: grid;
+
+        &_icon {
+            justify-self: end;
+        }
+    }
+}
