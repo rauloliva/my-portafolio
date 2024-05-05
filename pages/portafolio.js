@@ -30,17 +30,16 @@ const Portafolio = props => {
 };
 
 export async function getStaticProps() {
-    // get my Github repositories
-    const res = await fetch('https://api.github.com/users/rauloliva/repos');
-    const repositories = await res.json();
-  
-    return {
-      props: {
-        repositories,
-      },
-      revalidate: 10
-    };
-  }
-  
+  // get my Github repositories
+  const res = await fetch('https://api.github.com/users/rauloliva/repos');
+  const repositories = await res.json();
+
+  return {
+    props: {
+      repositories,
+    },
+    revalidate: 10,
+  };
+}
 
 export default Portafolio;

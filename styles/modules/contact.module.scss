@@ -13,6 +13,12 @@
         &_description {
             font-size: 1.1em;
         }
+
+        &_social {
+            margin: 2.5rem 0;
+            display: flex;
+            column-gap: 1.5rem;
+        }
     }
 
     &__right {
