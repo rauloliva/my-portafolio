@@ -13,19 +13,19 @@ const Layout = props => {
       <div className={style.layout__card}>
         <title>Portafolio</title>
         <nav>
-          <Link href="/" passHref prefetch={true}>
+          <Link href="/" passHref legacyBehavior>
             <a className={homeStyle}>Home</a>
           </Link>
 
-          <Link href="/about" passHref prefetch={true}>
+          <Link href="/about" passHref legacyBehavior>
             <a className={aboutStyle}>About</a>
           </Link>
 
-          <Link href="/portafolio" passHref >
+          <Link href="/portafolio" passHref legacyBehavior>
             <a className={portafolioStyle}>Portafolio</a>
           </Link>
 
-          <Link href="/contact" passHref>
+          <Link href="/contact" passHref legacyBehavior>
             <a className={contactStyle}>Contact</a>
           </Link>
         </nav>
