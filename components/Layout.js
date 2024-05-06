@@ -1,4 +1,4 @@
-import style from '../styles/modules/Layout.module.scss';
+import style from '../styles/modules/layout.module.scss';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
