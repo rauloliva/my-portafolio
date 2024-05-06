@@ -39,6 +39,12 @@
 
         &_unactive {
             color: inherit;
+            transition: all .5s;
+
+            &:hover {
+                transition: all .5s;
+                color: $secondary-color;
+            }
         }
     }
 }

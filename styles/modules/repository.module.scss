@@ -18,6 +18,13 @@
         text-align: center;
     }
 
+    &__description {
+        background-color: $primary-color; 
+        color: $fourth-color;
+        padding: 10px;
+        border-radius: 1rem;
+    }
+
     &__link {
         display: grid;
 

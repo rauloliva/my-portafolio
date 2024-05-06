@@ -1,14 +1,13 @@
 import style from '../styles/modules/repository.module.scss';
 import Image from 'next/image';
 
-const Repository = props => {
-  const { repo } = props;
+const Repository = ({ repo }) => {
   const repoName = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
 
   return (
     <div className={style.repository}>
       <h3 className={style.repository__title}>{repoName}</h3>
-      <p>{repo.description}</p>
+      <p className={style.repository__description}>{repo.description}</p>
       <p className={style.repository__link}>
         <a
           href={repo.html_url}

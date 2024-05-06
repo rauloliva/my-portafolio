@@ -25,8 +25,7 @@ const PortafolioView = () => {
       {repos.length > 0 ? (
         <section className={style.portafolio}>
           <h1>
-            My{' '}
-            <span className={style.portafolio__occupation}>Repositories</span>
+            My <span className={style.portafolio__occupation}>Repositories</span>
           </h1>
           <p>Click on the Github icon to go to the repository</p>
 
