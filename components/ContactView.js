@@ -5,11 +5,12 @@ import LinkedinIcon from '../img/icons/linkedin-icon.svg';
 import InstagramIcon from '../img/icons/instagram-icon.svg';
 import EmailIcon from '../img/icons/email-icon.svg';
 import style from '../styles/modules/contact.module.scss';
+import globalStyle from '../styles/modules/global.module.scss';
 
 const ContactView = () => (
   <>
     <section className={style.contact__left}>
-      <h1 className={style.contact__left_title}>
+      <h1 className={globalStyle.title}>
         Contact <span className={style.contact__left_occupation}>Me</span>
       </h1>
 

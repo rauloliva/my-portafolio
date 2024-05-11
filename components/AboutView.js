@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import photo from '../img/about_photo.jpg';
+import globalStyle from '../styles/modules/global.module.scss';
 import style from '../styles/modules/about.module.scss';
 
 const AboutView = () => (
@@ -11,7 +12,7 @@ const AboutView = () => (
     </section>
 
     <section className={style.about__right}>
-      <h1 className={style.about__right_title}>
+      <h1 className={globalStyle.title}>
         About <span className={style.about__right_occupation}>Me</span>
       </h1>
       <p>
