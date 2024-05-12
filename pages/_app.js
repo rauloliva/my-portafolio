@@ -1,5 +1,5 @@
-import '../styles/globals.css';
 import { NextUIProvider } from '@nextui-org/system';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
