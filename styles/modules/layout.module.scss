@@ -21,7 +21,7 @@
   }
 
   &__card {
-    width: 75%;
+    width: 60%;
     background-color: $primary-color;
     border-radius: 1rem;
     padding: 1rem 4rem;
@@ -43,7 +43,7 @@
       background-color: $primary-color;
 
       &_burger {
-        background-color: rgba($primary-color, .5);
+        background-color: rgba($primary-color, 0.5);
         color: $fourth-color;
         font-size: 2.5em;
       }
@@ -61,18 +61,16 @@
 
       @media only screen and (max-width: $vp-table) {
         padding: 1rem;
-
       }
     }
   }
 
   &__link {
-
     &_active {
       color: $third-color;
 
       @media only screen and (max-width: $vp-phone) {
-        font-size: .35em;
+        font-size: 0.35em;
       }
     }
 
@@ -81,7 +79,7 @@
       transition: all 0.5s;
 
       @media only screen and (max-width: $vp-phone) {
-        font-size: .35em;
+        font-size: 0.35em;
       }
 
       &:hover {

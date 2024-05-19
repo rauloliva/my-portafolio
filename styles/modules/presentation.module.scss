@@ -2,22 +2,27 @@
 
 .presentation {
   &__left {
+    justify-self: center;
+    align-self: center;
+
     @media only screen and (max-width: $vp-phone) {
       grid-row: 1 / 2;
     }
 
     & h3 {
       margin: 0;
-      font-size: 1.5em;
+      font-size: 2em;
+      font-weight: bold;
 
       @media only screen and (max-width: $vp-phone) {
-        font-size: 1.2em;
+        font-size: 1.3em;
       }
     }
 
     h1 {
-      margin: 8px 0;
+      margin: 0;
       font-size: 2.5em;
+      font-weight: bold;
 
       @media only screen and (max-width: $vp-phone) {
         font-size: 2.2em;
@@ -26,6 +31,7 @@
 
     &_occupation {
       color: $third-color;
+      font-size: 1.5em;
     }
 
     &_about {
@@ -55,7 +61,7 @@
   }
 
   &__right {
-    justify-self: end;
+    justify-self: center;
 
     @media only screen and (max-width: $vp-phone) {
       grid-row: 2 / 3;

@@ -1,24 +1,20 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
-import AboutView from '../components/AboutView';
+import AboutMe from '../components/AboutMe';
+import MetaHead from '../components/DOM/MetaHead';
+
+const metadata = {
+  title: 'About',
+  description:
+    'Raul Oliva is a professional Software Engineer focused on web development with experience working with frontend and backend technologies',
+  uri: '/about',
+};
 
 const About = () => (
   <>
-    <Head>
-      <title>Raul Oliva | About</title>
-      <meta
-        name="description"
-        content="Brief biography about the mexican developer Raul Oliva"
-      />
-      <meta
-        name="keywords"
-        content="Raul Oliva, biography, software developer, raul_oliva_cas, raul-oliva-27208817b, rauloliva"
-      />
-      <link rel="shortcut icon" href="/photo_profile.JPG" type="image/x-icon" />
-    </Head>
+    <MetaHead {...metadata} />
 
     <Layout>
-      <AboutView />
+      <AboutMe />
     </Layout>
   </>
 );

@@ -1,21 +1,17 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 import Presentation from '../components/Presentation';
+import MetaHead from '../components/DOM/MetaHead';
+
+const metadata = {
+  title: 'Home',
+  description:
+    'This is the portafolio of Raul Oliva, sharing his experience as a Web Developer and his Github Repositories',
+  uri: '/',
+};
 
 const Home = () => (
   <>
-    <Head>
-      <title>Raul Oliva | Home</title>
-      <meta
-        name="description"
-        content="Brief biography about the mexican developer Raul Oliva"
-      />
-      <meta
-        name="keywords"
-        content="Raul Oliva, biography, software developer, raul_oliva_cas, raul-oliva-27208817b, rauloliva"
-      />
-      <link rel="shortcut icon" href="/photo_profile.JPG" type="image/x-icon" />
-    </Head>
+    <MetaHead {...metadata} />
 
     <Layout>
       <Presentation />

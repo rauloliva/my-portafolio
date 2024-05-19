@@ -1,24 +1,19 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
-import ContactView from '../components/ContactView';
+import ContactMe from '../components/ContactMe';
+import MetaHead from '../components/DOM/MetaHead';
+
+const metadata = {
+  title: 'Contact',
+  description: 'Contact Raul Oliva through his different social media accounts',
+  uri: '/contact',
+};
 
 const Contact = () => (
   <>
-    <Head>
-      <title>Raul Oliva | About</title>
-      <meta
-        name="description"
-        content="Brief biography about the mexican developer Raul Oliva"
-      />
-      <meta
-        name="keywords"
-        content="Raul Oliva, biography, software developer, raul_oliva_cas, raul-oliva-27208817b, rauloliva"
-      />
-      <link rel="shortcut icon" href="/photo_profile.JPG" type="image/x-icon" />
-    </Head>
+    <MetaHead {...metadata} />
 
     <Layout>
-      <ContactView />
+      <ContactMe />
     </Layout>
   </>
 );

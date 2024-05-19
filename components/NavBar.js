@@ -16,8 +16,13 @@ const NavBar = () => {
   const view = router.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const { homeStyle, aboutStyle, portafolioStyle, contactStyle } =
-    defineLinkColor(view);
+  const {
+    homeStyle,
+    aboutStyle,
+    resumeStyle,
+    portafolioStyle,
+    contactStyle,
+  } = defineLinkColor(view);
 
   const menuLinks = [
     <Link className={homeStyle} href="/" key="home">
@@ -25,6 +30,9 @@ const NavBar = () => {
     </Link>,
     <Link className={aboutStyle} href="/about" key="about">
       About
+    </Link>,
+    <Link className={resumeStyle} href="/resume" key="resume">
+      Resume
     </Link>,
     <Link className={portafolioStyle} href="/portafolio" key="portafolio">
       Portafolio
@@ -49,7 +57,7 @@ const NavBar = () => {
 
       <NavbarContent
         className="hidden sm:flex gap-4"
-        style={{ justifyContent: 'end' }}
+        style={{ justifyContent: 'end', columnGap: '2.5rem' }}
       >
         {menuLinks.map((link, index) => (
           <NavbarItem key={`${link}-${index}`}>{link}</NavbarItem>
@@ -77,6 +85,11 @@ const defineLinkColor = view => {
   const aboutStyle =
     view == '/about' ? style.layout__link_active : style.layout__link_unactive;
 
+  const resumeStyle =
+    view == '/resume'
+      ? style.layout__link_active
+      : style.layout__link_unactive;
+
   const portafolioStyle =
     view == '/portafolio'
       ? style.layout__link_active
@@ -87,7 +100,13 @@ const defineLinkColor = view => {
       ? style.layout__link_active
       : style.layout__link_unactive;
 
-  return { homeStyle, aboutStyle, portafolioStyle, contactStyle };
+  return {
+    homeStyle,
+    aboutStyle,
+    resumeStyle,
+    portafolioStyle,
+    contactStyle,
+  };
 };
 
 export default NavBar;

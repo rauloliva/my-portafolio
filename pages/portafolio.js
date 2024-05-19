@@ -1,21 +1,17 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 import PortafolioView from '../components/PortafolioView';
+import MetaHead from '../components/DOM/MetaHead';
+
+const metadata = {
+  title: 'Portafolio',
+  description:
+    'Check out all projects and Github repositories developed by Raul Oliva',
+  uri: '/portafolio',
+};
 
 const Portafolio = () => (
   <>
-    <Head>
-      <title>Raul Oliva | Portafolio</title>
-      <meta
-        name="description"
-        content="Portafolio with Github repositories from the mexican developer Raul Oliva"
-      />
-      <meta
-        name="keywords"
-        content="Raul Oliva, portafolio, software developer, Github repositories, raul_oliva_cas, raul-oliva-27208817b, rauloliva"
-      />
-      <link rel="shortcut icon" href="/photo_profile.JPG" type="image/x-icon" />
-    </Head>
+    <MetaHead {...metadata} />
 
     <Layout>
       <PortafolioView />

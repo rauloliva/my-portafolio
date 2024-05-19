@@ -5,19 +5,18 @@ import LinkedinIcon from '../img/icons/linkedin-icon.svg';
 import InstagramIcon from '../img/icons/instagram-icon.svg';
 import EmailIcon from '../img/icons/email-icon.svg';
 import style from '../styles/modules/contact.module.scss';
-import globalStyle from '../styles/modules/global.module.scss';
+import Title from './DOM/Title';
+import P from './DOM/P';
 
-const ContactView = () => (
+const ContactMe = () => (
   <>
     <section className={style.contact__left}>
-      <h1 className={globalStyle.title}>
-        Contact <span className={style.contact__left_occupation}>Me</span>
-      </h1>
+      <Title>Contact Me</Title>
 
-      <p className={style.contact__left_description}>
+      <P>
         Feel free to use either one of these social media to get in touch with
         me.
-      </p>
+      </P>
 
       <div className={style.contact__left_social}>
         <a
@@ -73,4 +72,4 @@ const ContactView = () => (
   </>
 );
 
-export default ContactView;
+export default ContactMe;
