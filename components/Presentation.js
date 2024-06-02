@@ -2,6 +2,7 @@ import Image from 'next/image';
 import photo from '../img/photo_profile.JPG';
 import style from '../styles/modules/presentation.module.scss';
 import Button from './DOM/Button';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Presentation = () => (
   <>
@@ -12,7 +13,10 @@ const Presentation = () => (
         Software Engineer
       </span>
 
-      <Button href="/about">About Me</Button>
+      <Button href="/about">
+        About Me
+        <FaLongArrowAltRight />
+      </Button>
     </section>
 
     <section className={style.presentation__right}>

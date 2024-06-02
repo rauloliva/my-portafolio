@@ -5,6 +5,7 @@ import { getRepos } from '../js/repos';
 import { useEffect, useState } from 'react';
 import { ScrollShadow } from '@nextui-org/react';
 import Title from './DOM/Title';
+import ArrowDown from './ArrowDown';
 
 const PortafolioView = () => {
   const [repos, setRepos] = useState([]);
@@ -31,6 +32,8 @@ const PortafolioView = () => {
           <ScrollShadow hideScrollBar className="h-[410px]">
             <div className={style.portafolio__repos}>{githubRepos}</div>
           </ScrollShadow>
+
+          <ArrowDown />
         </section>
       ) : (
         <Loading />
