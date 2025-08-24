@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import photo from '../img/contact_photo.jpg';
+import ContactIcon from '../img/icons/contact.svg'
 import FacebookIcon from '../img/icons/facebook-icon.svg';
 import LinkedinIcon from '../img/icons/linkedin-icon.svg';
 import InstagramIcon from '../img/icons/instagram-icon.svg';
@@ -66,7 +66,7 @@ const ContactMe = () => (
 
     <section className={style.contact__right}>
       <div className={style.contact__image}>
-        <Image src={photo} width="300" height="350" alt="Photo of Raul Oliva" />
+        <Image src={ContactIcon} width="280" height="200" alt="Photo of Raul Oliva" />
       </div>
     </section>
   </>

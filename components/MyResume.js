@@ -6,7 +6,7 @@ const MyResume = () => (
   <section className={style.experience}>
     <Title>My Resume</Title>
 
-    <Embed src="/CV.pdf" />
+    <Embed src="/RaulAdrianOlivaCastillo - Resume.pdf" />
   </section>
 );
 export default MyResume;

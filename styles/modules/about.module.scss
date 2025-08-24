@@ -3,6 +3,7 @@
 .about {
   &__left {
     justify-self: center;
+    align-self: center;
 
     @media only screen and (max-width: $vp-phone) {
       padding-top: 0 !important;
@@ -16,7 +17,7 @@
 
   &__image {
     border-radius: 1rem;
-    box-shadow: 0 0 8px 8px $secondary-color;
+    //box-shadow: 0 0 8px 8px $secondary-color;
 
     @media only screen and (max-width: $vp-phone) {
       border-radius: 100%;
