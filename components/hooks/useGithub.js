@@ -56,7 +56,7 @@ const useRepos = () => {
     getRepos();
   });
 
-  return repos
+  return repos;
 };
 
 export { useProfileOverview, useRepos };
