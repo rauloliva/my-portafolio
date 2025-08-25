@@ -1,58 +1,38 @@
 import style from '../styles/modules/repository.module.scss';
 import Link from 'next/link';
-import { Card, CardHeader, CardBody, Image } from '@nextui-org/react';
-import img from '../img/repos/resturant_system.jpeg';
-import { reposDetails } from '../js/repos';
+import Image from 'next/image';
+import { reposLangs } from './hooks/useGithub';
 
 const Repository = ({ repo }) => {
   const repoName = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
 
-  let repoImage = reposDetails['' + repo.id];
-
-  repoImage = repoImage == undefined ? img : repoImage;
+  let repoLanguage = reposLangs[`${repo.id}`];
 
   return (
-    <Card className={style.flip_card.concat(' py-4')}>
-      <div className={style.flip_card_inner}>
-        <div className={style.flip_card_front}>
-          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-            <p className="text-tiny uppercase font-bold">{repo.full_name}</p>
-            <small className="text-default-500">{repo.language}</small>
-            <h4 className="font-bold text-large">{repoName}</h4>
-          </CardHeader>
-          <CardBody className="overflow-visible py-2">
-            <Image
-              alt="Card background"
-              className="object-cover rounded-xl"
-              src={repoImage.src}
-              width={270}
-            />
-          </CardBody>
-        </div>
-        <div className={style.flip_card_back}>
-          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-            <h4 className="font-bold text-large">{repoName}</h4>
-            <Link href={repo.html_url} passHref={true}>
-              <span
-                style={{ position: 'block', width: '100%' }}
-                className={style.repository__link_icon}
-              >
-                <Image
-                  src="https://logo.clearbit.com/github.com"
-                  width="30"
-                  height="30"
-                  alt="Github Icon"
-                />
-                Open Repository
-              </span>
+    <article className={style.repo}>
+      <section className={style.repo_header}>
+        <h3 className={style.repo_title}>{repoName}</h3>
+        <section className={style.repo_header_actions}>
+          <Image src={repoLanguage} width="20" height="20" alt="Java logo" />
+          <small className={style.repo_lang}>{repo.language} | </small>
+          <Image
+            src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png"
+            width="20"
+            height="20"
+            alt="Java logo"
+          />
+          <small className={style.repo_link}>
+            <Link href={repo.html_url} passHref={true} target="_blank">
+              Go to Repo
             </Link>
-          </CardHeader>
-          <CardBody className=" py-2">
-            <p className="text-tiny uppercase font-bold">{repo.description}</p>
-          </CardBody>
-        </div>
-      </div>
-    </Card>
+          </small>
+        </section>
+      </section>
+
+      <section>
+        <p className={style.repo_description}>{repo.description}</p>
+      </section>
+    </article>
   );
 };
 

@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['logo.clearbit.com'],
+    domains: ['logo.clearbit.com', 'cdn-icons-png.flaticon.com'],
   },
   webpack: (config, options) => {
     config.module.rules.push({
