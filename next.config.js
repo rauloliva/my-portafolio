@@ -1,7 +1,20 @@
+const { hostname } = require('os');
+
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['logo.clearbit.com', 'cdn-icons-png.flaticon.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'logo.clearbit.com',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn-icons-png.flaticon.com',
+        pathname: '**'
+      }
+    ]
   },
   webpack: (config, options) => {
     config.module.rules.push({
