@@ -36,4 +36,5 @@ const MetaHead = ({ title, description, uri }: MetaHeaderProps) => {
     </Head>
   );
 }
+
 export default MetaHead;

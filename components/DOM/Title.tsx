@@ -1,6 +1,10 @@
 import style from '../../styles/modules/title.module.scss';
 
-const Title = ({ children }) => {
+interface TitleProps {
+  children: string
+}
+
+const Title = ({ children }: TitleProps) => {
   const [text, highlight] = children.split(' ');
 
   return (
