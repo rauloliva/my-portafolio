@@ -1,6 +1,6 @@
-import Layout from '../components/layouts/Layout/Layout';
-import ContactMe from '../components/features/ContactMe/ContactMe';
-import MetaHead from '../components/layouts/MetaHead';
+import Layout from '@/components/layouts/Layout/Layout';
+import ContactMe from '@/components/features/ContactMe/ContactMe';
+import MetaHead from '@/components/layouts/MetaHead';
 
 const metadata = {
   title: 'Contact',

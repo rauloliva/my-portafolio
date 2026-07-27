@@ -9,6 +9,7 @@ import {
 } from '@nextui-org/react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+
 import style from './Layout/layout.module.scss';
 
 const NavBar = () => {

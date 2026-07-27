@@ -1,9 +1,9 @@
 import Head from 'next/head';
 
 interface MetaHeaderProps {
-  title: string
-  description: string
-  uri: string
+  title: string;
+  description: string;
+  uri: string;
 }
 
 const SITE_URL = 'https://my-portafolio-rho.vercel.app';
@@ -12,7 +12,7 @@ const DEFAULT_IMAGE = `${SITE_URL}/photo_profile.JPG`;
 const MetaHead = ({ title, description, uri }: MetaHeaderProps) => {
   const pageTitle = title ? `Raul Oliva | ${title}` : 'Raul Oliva';
   const fullUrl = `${SITE_URL}${uri}`;
-  
+
   return (
     <Head>
       <title>{pageTitle}</title>
@@ -35,6 +35,6 @@ const MetaHead = ({ title, description, uri }: MetaHeaderProps) => {
       <meta property="twitter:image" content={DEFAULT_IMAGE} />
     </Head>
   );
-}
+};
 
 export default MetaHead;

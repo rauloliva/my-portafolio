@@ -1,6 +1,6 @@
-import Layout from '../components/layouts/Layout/Layout';
-import Presentation from '../components/features/Presentation/Presentation';
-import MetaHead from '../components/layouts/MetaHead';
+import Layout from '@/components/layouts/Layout/Layout';
+import Presentation from '@/components/features/Presentation/Presentation';
+import MetaHead from '@/components/layouts/MetaHead';
 
 const metadata = {
   title: 'Home',

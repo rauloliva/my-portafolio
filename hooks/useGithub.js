@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import P from '../components/common/P';
-import Repository from '../components/features/Repository/Repository';
+
+import P from '@/components/common/P';
+import Repository from '@/components/features/Repository/Repository';
 
 async function callAPI(uri) {
   const res = await fetch(`https://api.github.com/${uri}`);

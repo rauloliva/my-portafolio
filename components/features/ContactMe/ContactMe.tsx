@@ -1,12 +1,15 @@
 import Image from 'next/image';
-import ContactIcon from '../../../img/icons/contact.svg';
-import FacebookIcon from '../../../img/icons/facebook-icon.svg';
-import LinkedinIcon from '../../../img/icons/linkedin-icon.svg';
-import InstagramIcon from '../../../img/icons/instagram-icon.svg';
-import EmailIcon from '../../../img/icons/email-icon.svg';
+
+import Title from '@/components/common/Title/Title';
+import P from '@/components/common/P';
+
+import ContactIcon from '@/img/icons/contact.svg';
+import FacebookIcon from '@/img/icons/facebook-icon.svg';
+import LinkedinIcon from '@/img/icons/linkedin-icon.svg';
+import InstagramIcon from '@/img/icons/instagram-icon.svg';
+import EmailIcon from '@/img/icons/email-icon.svg';
+
 import style from './contact.module.scss';
-import Title from '../../common/Title/Title';
-import P from '../../common/P';
 
 const ContactMe = () => (
   <>

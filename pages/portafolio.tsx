@@ -1,6 +1,6 @@
-import Layout from '../components/layouts/Layout/Layout';
-import PortafolioView from '../components/features/PortafolioView/PortafolioView';
-import MetaHead from '../components/layouts/MetaHead';
+import Layout from '@/components/layouts/Layout/Layout';
+import PortafolioView from '@/components/features/PortafolioView/PortafolioView';
+import MetaHead from '@/components/layouts/MetaHead';
 
 const metadata = {
   title: 'Portafolio',

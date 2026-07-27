@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import MyResume from '../components/MyResume';
+import MyResume from '@/components/features/MyResume/MyResume';
 
 describe('My Resume page', () => {
   it('renders the title', () => {

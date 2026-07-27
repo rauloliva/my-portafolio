@@ -1,11 +1,11 @@
-import { ReactNode } from 'react'
-import style from './button.module.scss';
+import { ReactNode } from 'react';
 import Link from 'next/link';
+import style from './button.module.scss';
 
 interface ButtonProps {
-  href: string,
-  isExt?: boolean,
-  children: ReactNode
+  href: string;
+  isExt?: boolean;
+  children: ReactNode;
 }
 
 const Button = ({ href, isExt = false, children }: ButtonProps) => (

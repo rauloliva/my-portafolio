@@ -1,6 +1,6 @@
-import style from './loading.module.scss';
-import image from '../../../img/spinner.gif';
 import Image from 'next/image';
+import style from './loading.module.scss';
+import image from '@/img/spinner.gif';
 
 const Loading = () => (
   <section className={style.loading}>

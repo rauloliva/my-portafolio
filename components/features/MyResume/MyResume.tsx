@@ -1,6 +1,7 @@
+import Title from '@/components/common/Title/Title';
+import Embed from '@/components/common/Embed/Embed';
+
 import style from './resume.module.scss';
-import Title from '../../common/Title/Title';
-import Embed from '../../common/Embed/Embed';
 
 const MyResume = () => (
   <section className={style.experience}>

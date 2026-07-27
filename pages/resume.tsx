@@ -1,6 +1,6 @@
-import Layout from '../components/layouts/Layout/Layout';
-import MyResume from '../components/features/MyResume/MyResume';
-import MetaHead from '../components/layouts/MetaHead';
+import Layout from '@/components/layouts/Layout/Layout';
+import MyResume from '@/components/features/MyResume/MyResume';
+import MetaHead from '@/components/layouts/MetaHead';
 
 const metadata = {
   title: 'Resume',

@@ -1,7 +1,7 @@
 import style from './title.module.scss';
 
 interface TitleProps {
-  children: string
+  children: string;
 }
 
 const Title = ({ children }: TitleProps) => {

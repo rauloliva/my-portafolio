@@ -1,7 +1,7 @@
 import style from './embed.module.scss';
 
 interface EmbedProps {
-  src: string
+  src: string;
 }
 
 const Embed = ({ src }: EmbedProps) => (

@@ -1,8 +1,11 @@
 import Image from 'next/image';
-import photo from '../../../img/photo_profile.JPG';
-import style from './presentation.module.scss';
-import Button from '../../common/Button/Button';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+
+import Button from '@/components/common/Button/Button';
+
+import photo from '@/img/photo_profile.JPG';
+
+import style from './presentation.module.scss';
 
 const Presentation = () => (
   <>

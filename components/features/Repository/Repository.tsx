@@ -1,8 +1,17 @@
-import style from './repository.module.scss';
 import Link from 'next/link';
-import ImageLogo from '../../common/ImageLogo';
+import ImageLogo from '@/components/common/ImageLogo';
+import style from './repository.module.scss';
 
-const Repository = ({ repo }) => {
+interface RepoProps {
+  repo: {
+    name: string;
+    language: string;
+    description: string;
+    html_url: string;
+  };
+}
+
+const Repository = ({ repo }: RepoProps) => {
   const repoName = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
 
   const repoLang = repo.language.toLowerCase();

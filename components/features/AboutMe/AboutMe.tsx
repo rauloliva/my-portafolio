@@ -1,13 +1,17 @@
 import Image from 'next/image';
+
+import Title from '@/components/common/Title/Title';
+import Loading from '@/components/layouts/Loading/Loading';
+
+import AboutIcon from '@/img/icons/aboutIcon.svg';
+import FutbolIcon from '@/img/icons/futbol-icon.svg';
+import PlaneIcon from '@/img/icons/plane-icon.svg';
+import WebDevIcon from '@/img/icons/web-dev-icon.svg';
+import GamingIcon from '@/img/icons/gaming-icon.svg';
+
 import style from './about.module.scss';
-import AboutIcon from '../../../img/icons/aboutIcon.svg';
-import FutbolIcon from '../../../img/icons/futbol-icon.svg';
-import PlaneIcon from '../../../img/icons/plane-icon.svg';
-import WebDevIcon from '../../../img/icons/web-dev-icon.svg';
-import GamingIcon from '../../../img/icons/gaming-icon.svg';
-import Title from '../../common/Title/Title';
-import Loading from '../../layouts/Loading/Loading';
-import { useProfileOverview } from '../../../hooks/useGithub';
+
+import { useProfileOverview } from '@/hooks/useGithub';
 
 const AboutMe = () => {
   const profileOverview = useProfileOverview();

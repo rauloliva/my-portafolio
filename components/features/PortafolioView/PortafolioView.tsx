@@ -1,9 +1,12 @@
-import style from './portafolio.module.scss';
-import Loading from '../../layouts/Loading/Loading';
 import { ScrollShadow } from '@nextui-org/react';
-import Title from '../../common/Title/Title';
-import ArrowDown from '../../layouts/ArrowDown/ArrowDown';
-import { useRepos } from '../../../hooks/useGithub';
+
+import Loading from '@/components/layouts/Loading/Loading';
+import Title from '@/components/common/Title/Title';
+import ArrowDown from '@/components/layouts/ArrowDown/ArrowDown';
+
+import style from './portafolio.module.scss';
+
+import { useRepos } from '@/hooks/useGithub';
 
 const PortafolioView = () => {
   const githubRepos = useRepos();

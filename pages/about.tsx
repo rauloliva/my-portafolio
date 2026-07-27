@@ -1,6 +1,6 @@
-import Layout from '../components/layouts/Layout/Layout';
-import AboutMe from '../components/features/AboutMe/AboutMe';
-import MetaHead from '../components/layouts/MetaHead';
+import Layout from '@/components/layouts/Layout/Layout';
+import AboutMe from '@/components/features/AboutMe/AboutMe';
+import MetaHead from '@/components/layouts/MetaHead';
 
 const metadata = {
   title: 'About',
