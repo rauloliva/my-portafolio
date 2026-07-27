@@ -12,3 +12,8 @@ declare module '@/styles/*' {
   const classes: { [key: string]: string };
   export default classes;
 }
+
+declare module '*.JPG' {
+  const content: import('next/image').StaticImageData;
+  export default content;
+}
