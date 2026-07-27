@@ -79,7 +79,7 @@ const NavBar = () => {
   );
 };
 
-const defineLinkColor = view => {
+const defineLinkColor = (view: string) => {
   const homeStyle =
     view == '/' ? style.layout__link_active : style.layout__link_unactive;
 
