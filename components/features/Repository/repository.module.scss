@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+.repo {
+  background-color: $fourth-color;
+  color: $primary-color;
+  padding: 10px;
+  border-radius: 1rem;
+  transition: all 0.4s;
+
+  &:hover {
+    box-shadow: 6px 6px 8px 2px $secondary-color;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+  }
+
+  &_header {
+    margin-bottom: 1rem;
+
+    &_actions {
+      display: flex;
+      column-gap: 5px;
+    }
+  }
+
+  &_title {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  &_lang {
+    color: #141e46d7;
+  }
+
+  &_description {
+    font-size: 13.5px;
+  }
+
+  &_link {
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+      
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+.contact {
+  &__left {
+    &_social {
+      margin: 2.5rem 0;
+      display: flex;
+      column-gap: 1.5rem;
+    }
+  }
+
+  &__right {
+    justify-self: center;
+
+    @media only screen and (max-width: $vp-phone) {
+      grid-row: 2 / 3;
+      padding: 0 3rem;
+      padding-top: 7px;
+    }
+  }
+
+  &__image {
+    // background: linear-gradient($primary-color, $secondary-color);
+    // border-radius: 50%;
+    padding: 10px;
+
+    @media only screen and (max-width: $vp-phone) {
+      border-radius: 100%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    & img {
+      border-radius: 50%;
+
+      @media only screen and (max-width: $vp-phone) {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  }
+}
