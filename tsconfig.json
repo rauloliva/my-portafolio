@@ -1,17 +1,15 @@
 {
     "compilerOptions": {
         "paths": {
-            "@/components/*": ["./components/*"],
-            "@/styles/*": ["./styles/*"],
-            "@/img/*": ["./img/*"],
-            "@/hooks/*": ["./hooks/*"],
-            "@/lib/*": ["./lib/*"]
+            "@/*": ["./*"]
         },
         "target": "es6",
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
         "forceConsistentCasingInFileNames": true,
         "noEmit": true,
         "esModuleInterop": true,
