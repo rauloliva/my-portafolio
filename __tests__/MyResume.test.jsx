@@ -15,7 +15,7 @@ describe('My Resume page', () => {
     expect(text).toEqual('My Resume');
   });
 
-  it('Resume is embeded in DOM', () => {
+  it('Resume is embedded in DOM', () => {
     render(<MyResume />);
 
     const embed = screen.getByTitle('embeded-resume');
