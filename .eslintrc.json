@@ -3,6 +3,18 @@
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended"
   ],
+  "overrides": [
+    {
+      "files": ["*.js", "*.cjs"],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "@typescript-eslint/no-require-imports": "off",
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"]
 }
