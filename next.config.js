@@ -1,7 +1,14 @@
-const { hostname } = require('os');
+const path = require('path');
 
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  sassOptions: {
+    includePaths: [
+      path.join(__dirname, 'styles'),
+      path.join(__dirname, 'styles/modules')
+    ],
+  },
   images: {
     remotePatterns: [
       {
@@ -16,7 +23,7 @@ module.exports = {
       }
     ]
   },
-  webpack: (config, options) => {
+  webpack: config => {
     config.module.rules.push({
       test: /\.pdf$/i,
       type: 'asset/source',
