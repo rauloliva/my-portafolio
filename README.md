@@ -20,7 +20,7 @@ my-portafolio/
 │   ├── common/        # Reusable UI building blocks and shared components
 │   └── features/      # Feature-specific sections such as About, Resume, and Portfolio
 │   └── layouts/       # Shared layout, navigation, and page shell components
-├── pages/             # Next.js route pages for the site
+├── app/               # Next.js route app for the site
 ├── hooks/             # Custom React hooks used across the app
 │   └── useGithub      # Custom Hook to interact with Github's API 
 ├── lib/               # Utility modules, helpers, and shared data

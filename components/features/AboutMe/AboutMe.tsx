@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 import Title from '@/components/common/Title/Title';
