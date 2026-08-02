@@ -7,7 +7,7 @@ interface MetaHeaderProps {
 }
 
 const SITE_URL = 'https://my-portafolio-rho.vercel.app';
-const DEFAULT_IMAGE = `${SITE_URL}/photo_profile.JPG`;
+const DEFAULT_IMAGE = `${SITE_URL}/photo_profile.jpg`;
 
 const MetaHead = ({ title, description, uri }: MetaHeaderProps) => {
   const pageTitle = title ? `Raul Oliva | ${title}` : 'Raul Oliva';
@@ -21,7 +21,7 @@ const MetaHead = ({ title, description, uri }: MetaHeaderProps) => {
         name="keywords"
         content="Raul Oliva, biography, software developer, raul_oliva_cas, raul-oliva-27208817b, rauloliva"
       />
-      <link rel="shortcut icon" href="/photo_profile.JPG" type="image/x-icon" />
+      <link rel="shortcut icon" href="/photo_profile.jpg" type="image/x-icon" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={pageTitle} />

@@ -28,6 +28,10 @@ const langLogos: Record<string, LangLogo> = {
     img: 'https://cdn-icons-png.flaticon.com/512/3291/3291695.png',
     alt: 'Github Logo',
   },
+  typescript: {
+    img: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png',
+    alt: 'TypeScript Logo'
+  }
 };
 
 export default langLogos;
