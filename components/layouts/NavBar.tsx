@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Navbar,
   NavbarMenuToggle,
@@ -8,22 +10,17 @@ import {
   Link,
 } from '@nextui-org/react';
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 import style from './Layout/layout.module.scss';
 
 const NavBar = () => {
-  const router = useRouter();
-  const view = router.pathname;
+  const pathname = usePathname();
+  const view = pathname || '/';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const {
-    homeStyle,
-    aboutStyle,
-    resumeStyle,
-    portafolioStyle,
-    contactStyle,
-  } = defineLinkColor(view);
+  const { homeStyle, aboutStyle, resumeStyle, portafolioStyle, contactStyle } =
+    defineLinkColor(view);
 
   const menuLinks = [
     <Link className={homeStyle} href="/" key="home">
@@ -87,9 +84,7 @@ const defineLinkColor = (view: string) => {
     view == '/about' ? style.layout__link_active : style.layout__link_unactive;
 
   const resumeStyle =
-    view == '/resume'
-      ? style.layout__link_active
-      : style.layout__link_unactive;
+    view == '/resume' ? style.layout__link_active : style.layout__link_unactive;
 
   const portafolioStyle =
     view == '/portafolio'

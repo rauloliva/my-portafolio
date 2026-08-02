@@ -1,3 +1,5 @@
+'use client';
+
 import { ScrollShadow } from '@nextui-org/react';
 
 import Loading from '@/components/layouts/Loading/Loading';
