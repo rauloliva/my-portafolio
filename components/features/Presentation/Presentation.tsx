@@ -3,7 +3,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 
 import Button from '@/components/common/Button/Button';
 
-import photo from '@/img/photo_profile.jpg';
+import photo from '@/public/photo_profile.jpg';
 
 import style from './presentation.module.scss';
 
