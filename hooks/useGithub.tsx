@@ -1,23 +1,25 @@
+'use client';
+
 import { useState, useEffect, useMemo, useCallback, ReactElement } from 'react';
 
 import P from '@/components/common/P';
 import Repository from '@/components/features/Repository/Repository';
 
 interface ReadmeResponse {
-  content: string
+  content: string;
 }
 
 export interface GithubRepo {
-  id: number,
-  name: string,
-  language: string,
-  html_url: string,
-  description: string
+  id: number;
+  name: string;
+  language: string;
+  html_url: string;
+  description: string;
 }
 
 async function callAPI<T>(uri: string): Promise<T> {
   const res = await fetch(`https://api.github.com/${uri}`);
-  return await res.json()
+  return await res.json();
 }
 
 // fetch Github profile overview
@@ -25,7 +27,9 @@ const useProfileOverview = () => {
   const [overviewRaw, setOverviewRaw] = useState<string>('');
 
   const getProfileOverview = useCallback(async () => {
-    const data = await callAPI<ReadmeResponse>('repos/rauloliva/rauloliva/readme');
+    const data = await callAPI<ReadmeResponse>(
+      'repos/rauloliva/rauloliva/readme',
+    );
     const data_base64 = data.content;
     let overview = atob(data_base64);
     overview = overview.split('##')[0];
@@ -67,7 +71,7 @@ const useRepos = () => {
           return <Repository key={repo.id} repo={repo} />;
         return null;
       })
-      .filter((repo): repo is ReactElement => repo !== null)
+      .filter((repo): repo is ReactElement => repo !== null);
   }, [reposRaw]);
 
   return repos;
