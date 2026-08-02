@@ -18,6 +18,12 @@ export const metadata = {
       'Contact Raul Oliva through his different social media accounts',
     images: ['/photo_profile.jpg'],
   },
+  icons: {
+    shortcut: {
+      url: '/photo_profile.jpg',
+      type: 'image/x-icon',
+    },
+  },
 };
 
 export default function ContactPage() {

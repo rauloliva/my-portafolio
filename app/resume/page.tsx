@@ -16,6 +16,12 @@ export const metadata = {
     description: 'Read and download the Resume of Raul Oliva',
     images: ['/photo_profile.jpg'],
   },
+  icons: {
+    shortcut: {
+      url: '/photo_profile.jpg',
+      type: 'image/x-icon',
+    },
+  },
 };
 
 export default function ResumePage() {

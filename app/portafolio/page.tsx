@@ -19,6 +19,12 @@ export const metadata = {
       'Check out all projects and Github repositories developed by Raul Oliva',
     images: ['/photo_profile.jpg'],
   },
+  icons: {
+    shortcut: {
+      url: '/photo_profile.jpg',
+      type: 'image/x-icon',
+    },
+  },
 };
 
 export default function PortafolioPage() {
