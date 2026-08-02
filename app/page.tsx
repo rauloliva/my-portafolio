@@ -19,6 +19,12 @@ export const metadata = {
       'This is the portafolio of Raul Oliva, sharing his experience as a Web Developer and his Github Repositories',
     images: ['/photo_profile.jpg'],
   },
+  icons: {
+    shortcut: {
+      url: '/photo_profile.jpg',
+      type: 'image/x-icon',
+    },
+  },
 };
 
 export default function HomePage() {

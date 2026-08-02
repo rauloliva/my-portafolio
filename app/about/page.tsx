@@ -19,6 +19,12 @@ export const metadata = {
       'Raul Oliva is a professional Software Engineer focused on web development with experience working with frontend and backend technologies',
     images: ['/photo_profile.jpg'],
   },
+  icons: {
+    shortcut: {
+      url: '/photo_profile.jpg',
+      type: 'image/x-icon',
+    },
+  },
 };
 
 export default function AboutPage() {
