@@ -3,7 +3,6 @@ import nextPlugin from "@next/eslint-plugin-next";
 import tsEslint from "typescript-eslint";
 
 export default tsEslint.config(
-  // 1. Archivos y carpetas ignorados
   {
     ignores: [
       ".next/**",
@@ -15,11 +14,11 @@ export default tsEslint.config(
     ],
   },
 
-  // 2. Reglas recomendadas de JS y TypeScript
+  // recommended JS and TypeScript rules
   js.configs.recommended,
   ...tsEslint.configs.recommended,
 
-  // 3. Reglas de Next.js y soporte para JSX
+  // Next.js rules and support for JSX
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     plugins: {
@@ -30,7 +29,7 @@ export default tsEslint.config(
       ...nextPlugin.configs["core-web-vitals"].rules,
       "no-undef": "off",
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-require-imports": "off", // Permite require() en archivos JS y de configuración
+      "@typescript-eslint/no-require-imports": "off", // allows require() in JS config files
     },
     languageOptions: {
       parserOptions: {
