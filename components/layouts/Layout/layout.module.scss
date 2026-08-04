@@ -7,17 +7,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
 
   @media only screen and (max-width: $vp-table) {
-    height: 105vh;
+    //height: 105vh;
   }
 
   @media only screen and (max-width: $vp-phone) {
     display: flex;
-    height: 100dvh;
     align-items: unset;
     overflow-y: auto;
+    max-height: 100%;
   }
 
   &__card {
