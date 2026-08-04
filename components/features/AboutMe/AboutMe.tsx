@@ -17,7 +17,7 @@ import { useProfileOverview } from '@/hooks/useGithub';
 
 const AboutMe = () => {
   const profileOverview = useProfileOverview();
-
+  
   return (
     <>
       <section className={style.about__left}>
@@ -34,7 +34,7 @@ const AboutMe = () => {
       <section className={style.about__right}>
         <Title>About Me</Title>
 
-        {profileOverview.length == 0 ? <Loading /> : profileOverview}
+        { profileOverview[0] == null ? <Loading /> : profileOverview }
 
         <section className={style.about__right_hobbies}>
           <span>Hobbies</span>
