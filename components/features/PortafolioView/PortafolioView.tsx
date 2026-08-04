@@ -19,7 +19,7 @@ const PortafolioView = () => {
         <section className={style.portafolio}>
           <Title>My Repositories</Title>
 
-          <ScrollShadow hideScrollBar className="h-[410px]">
+          <ScrollShadow hideScrollBar className="h-[510px]">
             <div className={style.portafolio__repos}>{githubRepos}</div>
           </ScrollShadow>
 

@@ -9,6 +9,7 @@ module.exports = {
       path.join(__dirname, 'styles/modules')
     ],
   },
+  allowedDevOrigins: ['192.168.100.143'],
   images: {
     remotePatterns: [
       {
