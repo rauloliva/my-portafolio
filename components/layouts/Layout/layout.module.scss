@@ -9,15 +9,15 @@
   align-items: center;
   min-height: 100vh;
 
-  @media only screen and (max-width: $vp-phone) {
-    min-height: 135vh;
-    display: flex;
-    align-items: unset;
-    padding: 1rem 0;
-  }
-
   @media only screen and (max-width: $vp-table) {
     height: 105vh;
+  }
+
+  @media only screen and (max-width: $vp-phone) {
+    display: flex;
+    height: 100dvh;
+    align-items: unset;
+    overflow-y: auto;
   }
 
   &__card {
@@ -32,15 +32,21 @@
       width: 80%;
     }
 
-    @media only screen and (max-width: 800px) {
-      width: 88%;
+    @media only screen and (max-width: $vp-phone) {
+      background-color: unset;
+      width: 100%;
       padding: 0 1rem;
+      box-shadow: unset;
     }
 
     &_nav {
       justify-content: flex-end;
       font-size: 1em;
       background-color: $primary-color;
+
+      @media only screen and (max-width: $vp-phone) {
+        background: none;
+      }
 
       &_burger {
         background-color: rgba($primary-color, 0.5);

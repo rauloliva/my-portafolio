@@ -5,8 +5,11 @@ import { useState, useEffect, useMemo, useCallback, ReactElement } from 'react';
 import P from '@/components/common/P';
 import Repository from '@/components/features/Repository/Repository';
 
-interface ReadmeResponse {
+import { GITHUB_API, RAULOLIVA_REPO_ID } from '@/constants'
+
+interface ResourceResponse {
   content: string;
+  encoding?: string;
 }
 
 export interface GithubRepo {
@@ -18,7 +21,7 @@ export interface GithubRepo {
 }
 
 async function callAPI<T>(uri: string): Promise<T> {
-  const res = await fetch(`https://api.github.com/${uri}`);
+  const res = await fetch(`${GITHUB_API.BASE}${uri}`);
   return await res.json();
 }
 
@@ -27,9 +30,7 @@ const useProfileOverview = () => {
   const [overviewRaw, setOverviewRaw] = useState<string>('');
 
   const getProfileOverview = useCallback(async () => {
-    const data = await callAPI<ReadmeResponse>(
-      'repos/rauloliva/rauloliva/readme',
-    );
+    const data = await callAPI<ResourceResponse>(GITHUB_API.README);
     const data_base64 = data.content;
     let overview = atob(data_base64);
     overview = overview.split('##')[0];
@@ -51,12 +52,40 @@ const useProfileOverview = () => {
   return paragraphs;
 };
 
+// fetch My Resume from rauloliva repo
+const useResumeFile = () => {
+  const [fileRaw, setFileRaw] = useState<string>('');
+
+  const getResumeFile = useCallback(async () => {
+    try {
+      const data = await callAPI<ResourceResponse>(GITHUB_API.RESUME);
+
+      if (data.content && data.encoding === 'base64') {
+        const resume = `data:application/pdf;base64,${data.content}`;
+        setFileRaw(resume);
+        return;
+      }
+
+      setFileRaw('');
+    } catch (error) {
+      console.error('Unable to load resume PDF: ', error);
+      setFileRaw('');
+    }
+  }, []);
+
+  useEffect(() => {
+    getResumeFile();
+  }, [getResumeFile]);
+
+  return fileRaw;
+};
+
 // get my Github repos
 const useRepos = () => {
   const [reposRaw, setReposRaw] = useState<GithubRepo[]>([]);
 
   const getRepos = useCallback(async () => {
-    const repositories = await callAPI<GithubRepo[]>('users/rauloliva/repos');
+    const repositories = await callAPI<GithubRepo[]>(GITHUB_API.REPOS);
     setReposRaw(repositories);
   }, []);
 
@@ -67,7 +96,7 @@ const useRepos = () => {
   const repos = useMemo(() => {
     return reposRaw
       .map(repo => {
-        if (repo.id !== 355990194 && repo.id !== 908044452)
+        if (repo.id !== RAULOLIVA_REPO_ID)
           return <Repository key={repo.id} repo={repo} />;
         return null;
       })
@@ -77,4 +106,4 @@ const useRepos = () => {
   return repos;
 };
 
-export { useProfileOverview, useRepos };
+export { useProfileOverview, useRepos, useResumeFile };
