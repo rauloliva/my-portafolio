@@ -1,0 +1,18 @@
+@use '@/styles/variables' as *;
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  gap: 1rem;
+
+  li {
+    font-size: 0.88rem;
+    background-color: $third-color;
+    color: $primary-color;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 1rem;
+    border: 2px solid $fourth-color;
+  }
+}

@@ -1,0 +1,51 @@
+@use '@/styles/variables' as *;
+
+.position {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid $fourth-color;
+  padding-left: 8px;
+  margin-bottom: 1.5rem;
+
+  &__name {
+    font-weight: bolder;
+    font-size: large;
+    margin: 3px 0;
+    color: white;
+  }
+
+  &__company {
+    color: $third-color;
+    font-size: 1rem;
+    margin: 2px 0;
+  }
+
+  &__date {
+    font-size: 0.88rem;
+    color: $grey-color;
+    margin: 2px 0;
+  }
+
+  &__overview {
+    font-size: 0.93rem;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & li {
+      margin-top: 2px;
+      display: flex;
+      align-items: flex-start;
+
+      &::before {
+        content: '\25A0';
+        margin-right: 8px;
+        font-size: 0.8em;
+        margin-top: 3px;
+      }
+    }
+  }
+}
