@@ -17,12 +17,12 @@ export const EXPERIENCES: experienceGroup[] = [
     company: 'Backbase',
     period: 'Jan 2026 - Current',
     overview: [
-      'Develop Spring Boot applications in a microservices architecture using Java 21, adhering to SOLID principles, code coverage compliance, and best practices.',
-      'Implement microservice communication using both synchronous (REST APIs) and asynchronous (Azure Service Bus) approaches to ensure efficient data flow.',
-      'Streamline the deployment and management of containerized services in Azure Kubernetes Service (AKS) to optimize environment stability.',
-      'Collaborate with cross-functional teams (Solution Architects, Business Analysts and clients) to provide backend perspective and provide technical solutions.',
+      'Designed and implemented scalable REST APIs and microservices, ensuring seamless data flow and optimal performance for front-end client applications.',
+      'Streamlined deployment processes in cloud environments (Azure/AKS).',
+      'Partnered with Frontend and Mobile engineers to design and implement robust APIs.',
+      'Collaborate with cross-functional teams (Solution Architects, Business Analysts and clients) to provide backend perspective.',
       'Manage project releases, including version bumps, configuration changes and release documentation.',
-      'Optimize microservice reliability through proactive Grafana monitoring and comprehensive root-cause analysis of system failures.',
+      'Optimize microservice reliability through proactive Grafana monitoring and comprehensive root-cause analysis of system failures.'
     ],
     skills: [
       'Spring Boot',
@@ -33,6 +33,7 @@ export const EXPERIENCES: experienceGroup[] = [
       'REST APIs',
       'Microservices',
       'Grafana',
+      'ArgoCD'
     ],
   },
   {
@@ -40,33 +41,35 @@ export const EXPERIENCES: experienceGroup[] = [
     company: 'Oracle',
     period: 'May 2025 - Aug 2025',
     overview: [
-      'Improved Oracle Expense Fusion application stability by resolving legacy code bugs,enhancing user experience and reliability with Java 8 and Oracle ADF.',
-      'Resolved issues with Rest API endpoints, testing them using Postman, and provided clear documentation explaining the bug, test case scenarios, and resolution.',
-      'Documented bug resolutions in Confluence, ensuring seamless knowledge transferand efficient future maintenance.',
+      'Enhanced user experience and overall stability for the Oracle Expense Fusion application.',
+      'Optimized data flow to the front-end by troubleshooting and resolving REST API endpoint issues using Postman',
+      'Boosted cross-team efficiency by documenting technical standards, test cases, and bug resolutions in Confluence.'
     ],
-    skills: ['Oracle ADF', 'Java', 'JavaScript', 'Linux', 'Docker'],
+    skills: ['Java', 'JavaScript', 'Linux', 'Oracle ADF', 'Docker', 'REST APIs'],
   },
   {
     name: 'Web Technical Lead',
     company: 'NXP Semiconductors',
     period: 'Jul 2024 - Apr 2025',
     overview: [
-      'Led data mining projects by querying and analyzing data from Teradata and a PostgreSQL database to provide insightful information to stakeholders for their decision-making processes.',
-      'Developed a Spring Boot application using Java 21 to crawl and scrape data from NXP.com, and its UI using React and Bootstrap to provide users a way to create reports based on crawled data.',
-      'Developed data pipelines using Python to extract data from APIs, transform and format the data, and load it into a PostgreSQL database.',
-      'Enabled dynamic visualization and reporting through Microsoft Power BI dashboards.',
-      'Led the development and maintenance of an internal automation tool using Java 17, Spring Boot, and Selenium to continuously automate complex Content Management System processes.',
-      'Mentored and trained junior team members, fostering their professional growth.',
-      'Partnered with UX designers to create mockups in Figma for upcoming projects and demos.',
+      'Partnered closely with UX designers to create and iterate mockups in Figma for upcoming web projects.',
+      'Developed responsive, high-performing user interfaces using React and Bootstrap, integrated seamlessly with a custom Java/Spring Boot backend.',
+      'Led data mining projects by querying and analyzing data from Teradata and a PostgreSQL database.',
+      'Developed a Spring Boot application using Java 21 to scrape data from NXP.com, and its UI using React and Bootstrap.',
+      'Improved data pipelines using Python to extract data from APIs, transform, format, and save the data into a PostgreSQL database.',
+      'Led the development and maintenance of an internal automation tool using Java 17, Spring Boot, and Selenium',
+      'Mentored and trained junior team members, leading technical discussions and promoting continuous improvement'
     ],
     skills: [
       'Java',
       'Spring Boot',
       'JavaScript',
       'React',
+      'Bootstrap',
       'Python',
       'Selenium',
       'PostgreSQL',
+      'Teradata'
     ],
   },
   {
@@ -74,19 +77,21 @@ export const EXPERIENCES: experienceGroup[] = [
     company: 'NXP Semiconductors',
     period: 'Nov 2020 - Jun 2024',
     overview: [
-      'Partnered with business lines to gather and translate web requirements into actionable updates for NXP.com, ensuring alignment with organizational goals and web guidelines.',
-      'Mined data from databases, warehouses, and APIs. Generated reports and delivered actionable insights for web teams and business lines, aiding strategic decisions.',
-      'Developed a Spring Boot application using Java 17 and Selenium to automate repetitive tasks in the publishing processes, web asset cleanups, and fixing static content.',
-      'Designed and developed a Chrome extension using React and Node.js to offer various tools and out-of-the-box solutions for daily publishing operations in one place.',
-      'Translated UX designs into reusable and functional front-end components using HTML, JS, CSS, and React.',
+      'Collaborated closely with business stakeholders to gather and translate web requirements into actionable digital experiences.',
+      'Translated UX designs into scalable, reusable, and production-ready front-end components using HTML5, CSS3, JavaScript, and React.',
+      'Designed and developed a custom Chrome extension utilizing React and Node.js, delivering out-of-the-box UI solutions.',
+      'Mined data from databases, warehouses, and APIs. Generated reports and delivered actionable insights for web teams and business lines.',
+      'Developed a Spring Boot application using Java 17 and Selenium to automate repetitive tasks in the publishing processes.',
       'Built a web application using PHP 8 and JavaScript to generate detailed Excel reports on web assets, extracting their data from Teradata, and sending the reports through email.',
-      'Deployed web applications, services, and scripts through Docker containers in a Linux environment.',
+      'Streamlined application delivery by deploying web services and scripts through Docker containers in a Linux environment.'
     ],
     skills: [
       'Java',
       'Spring Boot',
       'JavaScript',
       'React',
+      'CSS3',
+      'HTML5',
       'Python',
       'Selenium',
       'PostgreSQL',
@@ -98,14 +103,14 @@ export const EXPERIENCES: experienceGroup[] = [
     period: 'Jun 2019 - Nov 2020',
     overview: [
       'Collaborated with stakeholders to resolve ServiceNow incidents, identifying root cause and implementing fixes in Java 8 and PHP 7 web applications.',
-      'Created runbooks for every production deployment that I made to maintain standardization, consistency, and foster better coordination between developers and IT.',
-      'Participated in code reviews, testing code changes in QA and UAT environments, provided and received feedback through Bitbucket, created pull requests, and reviewed commits with Git.',
-      'Resolved issues with SQL queries in MySQL and SQL Server, testing them in QA and UAT instances, and requesting approval for production deployment.',
-      'Participated in an Agile team to develop new modules and features, providing estimated time, blockers, and next steps during Scrum ceremonies (dailies, planning, reviews, and refinements) to ensure transparent progress.',
+      'Created runbooks for every production deployment that I made to maintain standardization and consistency.',
+      'Participated in code reviews, testing code changes in QA and UAT environments.',
+      'Resolved issues with SQL queries in MySQL and SQL Server.',
+      'Participated in an Agile team to develop new modules and features, providing estimated time, blockers, and next steps during Scrum ceremonies.',
       'Understand business requirements based on user stories and work along with business analysts to resolve doubts/questions.',
-      'Efficiently resolved IT tickets in ServiceNow, meeting SLA commitments and ensuring prompt issue resolution.',
+      'Efficiently resolved IT tickets in ServiceNow, meeting SLA commitments and ensuring prompt issue resolution.'
     ],
-    skills: ['Java', 'JavScript', 'PHP', 'MySQL', 'JSP'],
+    skills: ['Java', 'JavaScript', 'CSS3', 'JSP', 'PHP', 'MySQL', 'Windows Server 2012', 'Tomcat'],
   },
 ] as const;
 
