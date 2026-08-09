@@ -1,0 +1,12 @@
+@use '@/styles/variables' as *;
+
+.experience {
+  &__left {
+    justify-self: center;
+  }
+
+  &__right {
+    justify-self: center;
+    align-self: center;
+  }
+}
