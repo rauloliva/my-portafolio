@@ -8,6 +8,10 @@
   padding-left: 8px;
   margin-bottom: 1.5rem;
 
+  &:last-child {
+    border-bottom: unset;
+  }
+
   &__name {
     font-weight: bolder;
     font-size: large;
